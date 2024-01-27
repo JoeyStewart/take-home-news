@@ -1,4 +1,4 @@
-.movies-container {
+.news-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 40px;
@@ -8,8 +8,8 @@
    }
    
    
-   .title {
+.title {
     text-align: center;
     color:rgb(231, 239, 237)
-   }
+}
    
