@@ -10,7 +10,7 @@ export default function Card({ title, image, date, showDetails, description}) {
     const slicedDate = date.slice(0, 10);
     
     return (
-      <main ClassName="Cards" to={`/${title}`} className='card-link'>
+      <main to={`/${title}`} className='card-link'>
         <section
           ref={ref}
           style={{ cursor: 'pointer' }}
@@ -30,7 +30,7 @@ export default function Card({ title, image, date, showDetails, description}) {
 
 Card.propTypes = {
   title: PropTypes.string.isRequired,
-  image: PropTypes.string.isRequired,
+  image: PropTypes.string, 
   showDetails: PropTypes.func.isRequired,
-  description: PropTypes.string.isRequired,
+  description: PropTypes.string,
 };
