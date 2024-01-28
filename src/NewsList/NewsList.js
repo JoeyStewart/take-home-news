@@ -51,5 +51,3 @@ NewsList.propTypes = {
   url: PropTypes.string.isRequired,
   urlToImage: PropTypes.string.isRequired, 
 };
-
-//Add propTypes
