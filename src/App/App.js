@@ -17,7 +17,6 @@ function App() {
   }, []);
 
   function showDetails(title){
-    console.log(title)
     fetch(`https://newsapi.org/v2/everything?q=${title}&domains=wsj.com&apiKey=676dc2532ad3454b8903fce9bd2bc8a5`)
       .then(response => response.json())
       .then(data => {

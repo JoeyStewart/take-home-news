@@ -8,10 +8,9 @@ export default function Card({ title, image, date, showDetails, description}) {
       threshold: 0.2, 
     });
     const slicedDate = date.slice(0, 10);
-    // const rawDate = new Date(date);
-    // const formattedDate = `${rawDate.getFullYear()}-${String(rawDate.getMonth() + 1).padStart(2, '0')}-${String(rawDate.getDate()).padStart(2, '0')}`;
+    
     return (
-      <main ClassName="Cards" to={`/${title}`} className='card-link'>
+      <main to={`/${title}`} className='card-link'>
         <section
           ref={ref}
           style={{ cursor: 'pointer' }}
@@ -31,7 +30,7 @@ export default function Card({ title, image, date, showDetails, description}) {
 
 Card.propTypes = {
   title: PropTypes.string.isRequired,
-  image: PropTypes.string.isRequired,
+  image: PropTypes.string, 
   showDetails: PropTypes.func.isRequired,
-  description: PropTypes.string.isRequired,
+  description: PropTypes.string,
 };
