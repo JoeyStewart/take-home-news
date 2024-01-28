@@ -1,71 +1,54 @@
-# Getting Started with Create React App
+# Take Home News
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-Test
+## Abstract:
 
-## Available Scripts
+This was a take home project made to simulate what may be given during the course of the interview process. This project aims to create fetch calls to pull information from News APIs. Cards were created to insert quick overview information of each article and allowing the using to 'click' the card so that the article may present further details. 
 
-In the project directory, you can run:
 
-### `npm start`
+## Installation Instructions:
+1. Click the green `code` button.
+2. Copy SSH to your clipboard.
+3. Open up the terminal.
+4. Change into the directory you wish to clone the app into with the cd command.
+5. Use the git clone command followed by pasting the copied SSH key.
+6. Change into the cloned directory with the cd command.
+7. Install dependencies by typing npm install into the terminal
+8. Type npm install react react-dom into the terminal
+9. Type npm start into the terminal
+10. Copy the link it provides. It will look like similiar to this: http://localhost:3000/#/
+11. Paste it into your web browser of choice
+12. Enjoy!
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Preview of App:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+[High Peaks GitHub Repository](https://github.com/JoeyStewart/High-Peaks)
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Context:
+This app was created during the intermission period between moduls 3 and 4 of Turings  software development program. It's aim is to help provide a bases for accurately describing the code that is created in this app. The purpose of this is for better preperation for real world application when it comes to the interview process. 
 
-### `npm run build`
+## Contributors:
+  
+[Joey Stewart](https://github.com/JoeyStewart)  
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Learning Goals:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+* Use routing, fetch calls, and useState to work the data into a way that satisfies all expectations.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+* Create a user interface that is easy to use and displays information in a clear way.
 
-### `npm run eject`
+* Write DRY, reusable code that follows SRP and trends toward function purity
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+* Implement a robust testing suite using Cypress.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+* Make network requests to retrieve data.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Major Wins:
+### Joey:
+This project is very similar to one that we did early in mod 3. That project took consistant work over the course of 10 days, while I was able to finish this project in its current state in under 8 hours. The progress of my understanding of React fills me with great a sense of achievement.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Challenges and How We Overcame Them:
+### Joey:
+There were no major hurdles. Cypress once again gave me some pause with the stubbing process, but it did not take me too long to realize what and why it is happening. I've discovered that the api that I modify to pull direct data on a single object, does not always line up with how its constructed in the app, and what is needed to be tested. I simply have to copy and past the get request api that shows in cypress during testing, and use that within my intercept. 
