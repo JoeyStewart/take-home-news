@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 
 export default function Card({ title, image, date, showDetails, description, author, content, url}) {
     const [ref, inView] = useInView({
-      triggerOnce: true, 
       threshold: 0.2, 
     });
 
