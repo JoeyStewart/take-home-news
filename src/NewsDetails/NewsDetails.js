@@ -1,19 +1,22 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import './NewsDetails.css'
 
 export default function NewsDetails({ singleArticle }) {
   if (!singleArticle) {
     return null;
   }
-
-  const { title, description, content, date } = singleArticle;
-
+  const rawDate = new Date(singleArticle.publishedAt);
+  const formattedDate = `${rawDate.getFullYear()}-${String(rawDate.getMonth() + 1).padStart(2, '0')}-${String(rawDate.getDate()).padStart(2, '0')}`;
   return (
-    <div className="news-details">
-      <h2>{title}</h2>
-      <p>{description}</p>
-      <p>{content}</p>
-      <p>{date}</p>
+    <div className="news-details-container">
+      <div className="news-details">
+        <h2>{singleArticle.title}</h2>
+        <p>{singleArticle.description}</p>
+        <p>{singleArticle.content}</p>
+        <a href={singleArticle.url} target="_blank" rel="noopener noreferrer">Click to Read the Full Article!</a>
+        <p>{formattedDate}</p>
+      </div>
     </div>
   );
 }

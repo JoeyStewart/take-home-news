@@ -1,0 +1,34 @@
+.news-details-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;  
+  }
+  
+  .news-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+    max-width: 600px;
+  }
+  
+  .news-details {
+    color: #333;
+  }
+  
+  .news-details h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .news-details p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
