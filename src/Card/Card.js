@@ -3,13 +3,14 @@ import { useInView } from 'react-intersection-observer';
 import PropTypes from 'prop-types';
 import React from 'react';
 
-export default function Card({ title, image, date, showDetails, description, author, content, url}) {
+export default function Card({ title, image, date, showDetails, description}) {
     const [ref, inView] = useInView({
       threshold: 0.2, 
     });
-
+    const rawDate = new Date(date);
+    const formattedDate = `${rawDate.getFullYear()}-${String(rawDate.getMonth() + 1).padStart(2, '0')}-${String(rawDate.getDate()).padStart(2, '0')}`;
     return (
-      <main to={`/${title}`} className='card-link'>
+      <main ClassName="Cards" to={`/${title}`} className='card-link'>
         <section
           ref={ref}
           style={{ cursor: 'pointer' }}
@@ -19,11 +20,8 @@ export default function Card({ title, image, date, showDetails, description, aut
           <div className='news-info'>
             <h3 className='title'>{title}</h3>
             {image && <img className='image' src={image} alt={title} />}
-            <h3 className='author'>Author: {author}</h3>
             <p className='description'>{description}</p>
-            <p className='content'>{content}</p>
-            <p className='date'>{date}</p>
-            <p className='url'>{url}</p>
+            <p className='date'>{formattedDate}</p>
           </div>
         </section>
       </main>
