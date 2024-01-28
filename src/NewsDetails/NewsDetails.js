@@ -7,8 +7,7 @@ export default function NewsDetails({ singleArticle }) {
     return null;
   }
 
-  const rawDate = new Date(singleArticle.publishedAt);
-  const formattedDate = `${rawDate.getFullYear()}-${String(rawDate.getMonth() + 1).padStart(2, '0')}-${String(rawDate.getDate()).padStart(2, '0')}`;
+  const slicedDate = singleArticle.publishedAt.slice(0, 10);
 
   return (
     <div className="news-details-container">
@@ -16,7 +15,7 @@ export default function NewsDetails({ singleArticle }) {
         <h2 className="single-title">{singleArticle.title}</h2>
         {singleArticle.urlToImage && <img className='image' src={singleArticle.urlToImage} alt={singleArticle.title} />}
         <h3 className="single-author">Author: {singleArticle.author}</h3> 
-        <p className="single-date">{formattedDate}</p>
+        <p className="single-date">{slicedDate}</p>
         <p className="single-content">{singleArticle.content}</p>
         <a className="single-url" href={singleArticle.url} target="_blank" rel="noopener noreferrer">Click to Read the Full Article!</a>
       </div>
