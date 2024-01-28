@@ -1,6 +1,7 @@
 import './Card.css';
 import { useInView } from 'react-intersection-observer';
 import PropTypes from 'prop-types';
+import React from 'react';
 
 export default function Card({ title, image, date, showDetails, description, author, content, url}) {
     const [ref, inView] = useInView({
