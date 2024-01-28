@@ -13,6 +13,8 @@ export default function NewsList({ newsArticles, showDetails }) {
     <div>
       <div className="search-container">
         <input
+          className="article-input"
+          name="article"
           type="text"
           placeholder="Search articles..."
           value={searchInput}
