@@ -1,23 +1,28 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export default function NewsDetails({ newsDetails }) {
+export default function NewsDetails({ singleArticle }) {
+  if (!singleArticle) {
+    return null;
+  }
+
+  const { title, description, content, date } = singleArticle;
+
   return (
     <div className="news-details">
-      <h2>{newsDetails.title}</h2>
-      <p>{newsDetails.description}</p>
-      <p>{newsDetails.content}</p>
-      <p>{newsDetails.date}</p>
+      <h2>{title}</h2>
+      <p>{description}</p>
+      <p>{content}</p>
+      <p>{date}</p>
     </div>
   );
 }
 
-// Add more propTypes for other details when necessary 
 NewsDetails.propTypes = {
-  newsDetails: PropTypes.shape({
+    singleArticle: PropTypes.shape({
     title: PropTypes.string,
     description: PropTypes.string,
     content: PropTypes.string,
     date: PropTypes.string,
-  }).isRequired,
+  }),
 };
