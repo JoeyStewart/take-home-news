@@ -13,6 +13,8 @@ export default function NewsList({ newsArticles, showDetails }) {
     <div>
       <div className="search-container">
         <input
+          className="article-input"
+          name="article"
           type="text"
           placeholder="Search articles..."
           value={searchInput}
@@ -42,6 +44,12 @@ export default function NewsList({ newsArticles, showDetails }) {
 NewsList.propTypes = {
   newsArticles: PropTypes.array.isRequired,
   showDetails: PropTypes.func.isRequired,
+  title: PropTypes.string.isRequired,
+  content: PropTypes.string.isRequired,
+  date: PropTypes.string.isRequired, 
+  author: PropTypes.string.isRequired,
+  url: PropTypes.string.isRequired,
+  urlToImage: PropTypes.string.isRequired, 
 };
 
 //Add propTypes
