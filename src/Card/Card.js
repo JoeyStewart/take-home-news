@@ -31,11 +31,7 @@ export default function Card({ title, image, date, showDetails, description}) {
 
 Card.propTypes = {
   title: PropTypes.string.isRequired,
-  image: PropTypes.string,
+  image: PropTypes.string.isRequired,
   showDetails: PropTypes.func.isRequired,
-  description: PropTypes.string,
-  author: PropTypes.string.isRequired,
-  content: PropTypes.string.isRequired,
-  url: PropTypes.string.isRequired,
-  id: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
 };

@@ -24,10 +24,12 @@ export default function NewsDetails({ singleArticle }) {
 }
 
 NewsDetails.propTypes = {
-    singleArticle: PropTypes.shape({
-    title: PropTypes.string,
-    description: PropTypes.string,
-    content: PropTypes.string,
-    date: PropTypes.string,
+  singleArticle: PropTypes.shape({
+    title: PropTypes.string.isRequired,
+    content: PropTypes.string.isRequired,
+    date: PropTypes.string.isRequired, 
+    author: PropTypes.string.isRequired,
+    url: PropTypes.string.isRequired,
+    urlToImage: PropTypes.string.isRequired, 
   }),
 };
