@@ -10,14 +10,15 @@ export default function NewsList({ newsArticles, showDetails }) {
       <div className="news-container">
         {newsArticles.map((newsArticle) => (
           <Card 
-            id={newsArticle.id}
-            author={newsArticle.author}
+            key={newsArticle.title} 
             title={newsArticle.title} 
             description={newsArticle.description} 
             content={newsArticle.content}
+            date={newsArticle.publishedAt}
             image={newsArticle.urlToImage}
+            author={newsArticle.author}
             url={newsArticle.url}
-            showDetails={() => showDetails(newsArticle.id)}
+            showDetails={() => showDetails(newsArticle.title)}
           />
         ))}
       </div>
@@ -25,5 +26,9 @@ export default function NewsList({ newsArticles, showDetails }) {
   }
 }
 
+NewsList.propTypes = {
+  newsArticles: PropTypes.array.isRequired,
+  showDetails: PropTypes.func.isRequired,
+};
 
 //Add propTypes
